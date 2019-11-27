@@ -1,0 +1,83 @@
+﻿
+@model Candidate.Models.ExamMark
+
+@{
+    ViewData["Title"] = "Home";
+}
+
+    <dd>
+        @Html.ActionLink("Change Password", "ChangePassword", new { userId = Model.UserID })   @*need to pass the UserID which is already there in the model as parameter*@
+    </dd>
+<div>
+    <h2>Exam Mark</h2>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Class)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Class)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Malayalam)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Malayalam)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.English)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.English)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Hindi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Hindi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Mathematics)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Mathematics)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Science)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Science)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SocialScience)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SocialScience)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Total)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Total)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Percentage)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Percentage)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Grade)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Grade)
+        </dd>
+    </dl>
+</div>

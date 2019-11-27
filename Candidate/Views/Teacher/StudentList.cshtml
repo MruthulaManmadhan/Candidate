@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Candidate.Models.UserInfo>
+@{
+    ViewData["Title"] = "StudentList";
+}
+
+<h2>Students List</h2>
+
+
+@if (ViewBag.message != null)
+{
+    <h3>@ViewBag.message</h3>
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Class)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Class)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.ActionLink("Assign Marks", "AssignMark", new { Userid = item.UserID })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

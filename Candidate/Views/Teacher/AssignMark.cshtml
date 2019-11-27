@@ -1,0 +1,84 @@
+﻿@model Candidate.Models.ExamMark
+
+@{
+    ViewData["Title"] = "AssignMark";
+}
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AssignMark">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <dt>
+                @Html.HiddenFor(model => model.UserID)
+
+                @Html.DisplayNameFor(model => model.Name)
+
+                @Html.DisplayFor(model => model.Name)
+                @Html.HiddenFor(model => model.Name)
+
+            </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Class)
+
+                @Html.DisplayFor(model => model.Class)
+                @Html.HiddenFor(model => model.Class)
+
+            </dt>
+            <div class="form-group">
+                <label asp-for="Malayalam" class="control-label"></label>
+                <input asp-for="Malayalam" class="form-control" />
+                <span asp-validation-for="Malayalam" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="English" class="control-label"></label>
+                <input asp-for="English" class="form-control" />
+                <span asp-validation-for="English" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hindi" class="control-label"></label>
+                <input asp-for="Hindi" class="form-control" />
+                <span asp-validation-for="Hindi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mathematics" class="control-label"></label>
+                <input asp-for="Mathematics" class="form-control" />
+                <span asp-validation-for="Mathematics" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Science" class="control-label"></label>
+                <input asp-for="Science" class="form-control" />
+                <span asp-validation-for="Science" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SocialScience" class="control-label"></label>
+                <input asp-for="SocialScience" class="form-control" />
+                <span asp-validation-for="SocialScience" class="text-danger"></span>
+            </div>
+            <dt>
+                @Html.DisplayNameFor(model => model.Total)
+
+                @Html.DisplayFor(model => model.Total)
+            </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Percentage)
+
+                @Html.DisplayFor(model => model.Percentage)
+            </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Grade)
+
+                @Html.DisplayFor(model => model.Grade)
+            </dt>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="StudentList">Back to List</a>
+</div>
+
